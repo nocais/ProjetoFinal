@@ -1,0 +1,46 @@
+
+@base = https://localhost:7113
+@id = 
+
+### CADASTRAR
+POST {{base}}/api/v1/usuarios
+Content-Type: application/json
+
+{
+  "nome": "Ricardo",
+  "email": "ricardo@gmail.com",
+  "senha": "12345678",
+  "cargo": "Dev"
+}
+
+### LISTAR TODOS
+GET {{base}}/api/v1/usuarios
+
+### BUSCAR POR ID
+GET {{base}}/api/v1/usuarios/{{id}}
+
+### ATUALIZAR
+PUT {{base}}/api/v1/usuarios/{{id}}
+Content-Type: application/json
+
+{
+  "nome": "Ricardo Nocais",
+  "cargo": "Desenvolvedor"
+}
+
+### DESATIVAR
+DELETE {{base}}/api/v1/usuarios/{{id}}
+
+### ATIVAR
+POST {{base}}/api/v1/usuarios/{{id}}/ativar
+
+### CADASTRAR EMAIL DUPLICADO
+POST {{base}}/api/v1/usuarios
+Content-Type: application/json
+
+{
+  "nome": "Ronaldo",
+  "email": "ricardo@gmail.com",
+  "senha": "senha",
+  "cargo": "Supervisor"
+}
