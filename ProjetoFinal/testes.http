@@ -1,8 +1,9 @@
 
 @base = https://localhost:7113
 @id = 
+// colar acima o id gerado em "cadastrar"
 
-### CADASTRAR
+### Cadastrar
 POST {{base}}/api/v1/usuarios
 Content-Type: application/json
 
@@ -13,13 +14,13 @@ Content-Type: application/json
   "cargo": "Dev"
 }
 
-### LISTAR TODOS
+### Listar todos
 GET {{base}}/api/v1/usuarios
 
-### BUSCAR POR ID
+### Buscar por id
 GET {{base}}/api/v1/usuarios/{{id}}
 
-### ATUALIZAR
+### Atualizar
 PUT {{base}}/api/v1/usuarios/{{id}}
 Content-Type: application/json
 
@@ -28,13 +29,13 @@ Content-Type: application/json
   "cargo": "Desenvolvedor"
 }
 
-### DESATIVAR
+### Desativar
 DELETE {{base}}/api/v1/usuarios/{{id}}
 
-### ATIVAR
+### Ativar
 POST {{base}}/api/v1/usuarios/{{id}}/ativar
 
-### CADASTRAR EMAIL DUPLICADO
+### Cadastrar email duplicado
 POST {{base}}/api/v1/usuarios
 Content-Type: application/json
 

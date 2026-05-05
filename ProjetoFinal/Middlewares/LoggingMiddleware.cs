@@ -12,7 +12,6 @@ public class LoggingMiddleware(RequestDelegate next, ILogger<LoggingMiddleware> 
         context.Items["StartTime"] = DateTime.Now;
         await next(context);
         sw.Stop();
-        logger.LogInformation("{Method} {Path} -> {Status} em {Elapsed}ms",
-            context.Request.Method, context.Request.Path, context.Response.StatusCode, sw.ElapsedMilliseconds);
+        logger.LogInformation(context.Request.Method, context.Request.Path, context.Response.StatusCode, sw.ElapsedMilliseconds);
     }
 }
