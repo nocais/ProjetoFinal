@@ -1,6 +1,4 @@
-﻿// Formulário que o frontend preenche e a API responde
-
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 
 namespace ProjetoFinal.Models.Dtos;
 
